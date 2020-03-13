@@ -350,74 +350,113 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVZ-aA-2bZ">
-                                <rect key="frame" x="154" y="65" width="107" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVZ-aA-2bZ">
+                                <rect key="frame" x="20" y="64" width="374" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enable Dark Mode?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxt-zf-scy">
-                                <rect key="frame" x="38" y="153" width="170" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="deW-BL-XyS">
-                                <rect key="frame" x="347" y="150" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remind me daily to log Items?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79o-Nf-9Jx">
-                                <rect key="frame" x="38" y="210" width="258" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="44h-ju-VOt">
-                                <rect key="frame" x="347" y="207" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="89w-RT-Z0a">
-                                <rect key="frame" x="0.0" y="305" width="414" height="225"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a time below:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mnv-H0-lJZ">
-                                <rect key="frame" x="38" y="273" width="187" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmI-N6-VEW">
-                                <rect key="frame" x="122" y="555" width="170" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Add Reminder">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFy-A6-t6b">
-                                <rect key="frame" x="86" y="727" width="243" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEi-Bl-fm3">
+                                <rect key="frame" x="20" y="126" width="374" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Dark Mode?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxt-zf-scy">
+                                        <rect key="frame" x="0.0" y="10" width="169.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remind me to log items?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79o-Nf-9Jx">
+                                        <rect key="frame" x="0.0" y="64" width="213" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="deW-BL-XyS">
+                                        <rect key="frame" x="325" y="6.5" width="51" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="49" id="9hV-JB-4uj"/>
+                                        </constraints>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="44h-ju-VOt">
+                                        <rect key="frame" x="325" y="60.5" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="79o-Nf-9Jx" firstAttribute="leading" secondItem="oEi-Bl-fm3" secondAttribute="leading" id="5Ds-to-3X4"/>
+                                    <constraint firstItem="44h-ju-VOt" firstAttribute="trailing" secondItem="deW-BL-XyS" secondAttribute="trailing" id="5Mx-gE-Inx"/>
+                                    <constraint firstItem="Sxt-zf-scy" firstAttribute="top" secondItem="oEi-Bl-fm3" secondAttribute="top" constant="10" id="9KE-5r-Kz5"/>
+                                    <constraint firstAttribute="trailing" secondItem="deW-BL-XyS" secondAttribute="trailing" id="CoW-ww-7RQ"/>
+                                    <constraint firstItem="44h-ju-VOt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="79o-Nf-9Jx" secondAttribute="trailing" constant="8" id="IUP-w9-HEJ"/>
+                                    <constraint firstItem="Sxt-zf-scy" firstAttribute="leading" secondItem="oEi-Bl-fm3" secondAttribute="leading" id="KoN-oc-Y51"/>
+                                    <constraint firstItem="44h-ju-VOt" firstAttribute="centerY" secondItem="79o-Nf-9Jx" secondAttribute="centerY" id="a9Q-kr-ZCM"/>
+                                    <constraint firstItem="deW-BL-XyS" firstAttribute="centerY" secondItem="Sxt-zf-scy" secondAttribute="centerY" id="n6f-Lv-Eth"/>
+                                    <constraint firstItem="79o-Nf-9Jx" firstAttribute="top" secondItem="Sxt-zf-scy" secondAttribute="bottom" constant="30" id="nUr-X1-dE2"/>
+                                    <constraint firstItem="deW-BL-XyS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Sxt-zf-scy" secondAttribute="trailing" constant="31.5" id="r3K-L5-7gu"/>
+                                    <constraint firstAttribute="height" constant="100" id="zJo-JF-z8K"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFy-A6-t6b">
+                                <rect key="frame" x="20" y="512" width="374" height="42"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="RESET ALL">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a time below:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mnv-H0-lJZ">
+                                <rect key="frame" x="20" y="246" width="187" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fFy-dh-pxp">
+                                <rect key="frame" x="62" y="280" width="384" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="cxT-xW-u8d"/>
+                                    <constraint firstAttribute="height" constant="150" id="k8K-8W-ON4"/>
+                                </constraints>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmI-N6-VEW">
+                                <rect key="frame" x="122" y="440" width="170" height="42"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="4oe-hQ-uNN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Add Reminder">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fFy-dh-pxp" firstAttribute="centerX" secondItem="XAf-7s-bZ9" secondAttribute="centerX" id="0nh-nZ-6iN"/>
+                            <constraint firstItem="GVZ-aA-2bZ" firstAttribute="top" secondItem="m1z-nN-Wfz" secondAttribute="top" constant="20" id="0t7-5h-90e"/>
+                            <constraint firstItem="oEi-Bl-fm3" firstAttribute="top" secondItem="GVZ-aA-2bZ" secondAttribute="bottom" constant="20" id="37x-sS-MBi"/>
+                            <constraint firstItem="fFy-dh-pxp" firstAttribute="top" secondItem="Mnv-H0-lJZ" secondAttribute="bottom" constant="10" id="9pT-Rw-hYY"/>
+                            <constraint firstItem="m1z-nN-Wfz" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Mnv-H0-lJZ" secondAttribute="trailing" constant="113" id="BkY-0n-mRC"/>
+                            <constraint firstItem="WmI-N6-VEW" firstAttribute="centerX" secondItem="XAf-7s-bZ9" secondAttribute="centerX" id="Cej-o0-SXk"/>
+                            <constraint firstItem="Mnv-H0-lJZ" firstAttribute="top" secondItem="oEi-Bl-fm3" secondAttribute="bottom" constant="20" id="HSt-Hu-ant"/>
+                            <constraint firstItem="QFy-A6-t6b" firstAttribute="top" secondItem="WmI-N6-VEW" secondAttribute="bottom" constant="30" id="KFe-lB-vJs"/>
+                            <constraint firstItem="GVZ-aA-2bZ" firstAttribute="leading" secondItem="m1z-nN-Wfz" secondAttribute="leading" constant="20" id="Lvd-DJ-8dB"/>
+                            <constraint firstItem="WmI-N6-VEW" firstAttribute="top" secondItem="fFy-dh-pxp" secondAttribute="bottom" constant="10" id="OmM-1P-rDU"/>
+                            <constraint firstItem="QFy-A6-t6b" firstAttribute="centerX" secondItem="XAf-7s-bZ9" secondAttribute="centerX" id="PI7-gq-d1M"/>
+                            <constraint firstItem="oEi-Bl-fm3" firstAttribute="leading" secondItem="m1z-nN-Wfz" secondAttribute="leading" constant="20" id="WZ0-es-eK2"/>
+                            <constraint firstAttribute="trailing" secondItem="oEi-Bl-fm3" secondAttribute="trailing" constant="20" id="Zbs-Wr-KVx"/>
+                            <constraint firstItem="m1z-nN-Wfz" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QFy-A6-t6b" secondAttribute="trailing" constant="20" id="dXp-C1-9VH"/>
+                            <constraint firstItem="Mnv-H0-lJZ" firstAttribute="leading" secondItem="m1z-nN-Wfz" secondAttribute="leading" constant="20" id="hed-3S-Qk5"/>
+                            <constraint firstItem="GVZ-aA-2bZ" firstAttribute="centerX" secondItem="XAf-7s-bZ9" secondAttribute="centerX" id="jEh-O7-ucE"/>
+                            <constraint firstItem="m1z-nN-Wfz" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GVZ-aA-2bZ" secondAttribute="trailing" constant="20" id="rZK-NU-z0c"/>
+                            <constraint firstItem="QFy-A6-t6b" firstAttribute="leading" secondItem="m1z-nN-Wfz" secondAttribute="leading" constant="20" id="ybV-ng-O1M"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="m1z-nN-Wfz"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="EhX-cc-vGa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1DZ-Cj-tfV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-439.13043478260875" y="594.64285714285711"/>
+            <point key="canvasLocation" x="-446.25" y="589.43661971830988"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="16a-aA-Eaf">
