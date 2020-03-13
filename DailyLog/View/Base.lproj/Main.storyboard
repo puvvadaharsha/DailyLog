@@ -24,11 +24,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="iFs-rR-CVf">
                                 <rect key="frame" x="20" y="179" width="374" height="619"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="141" id="epy-dA-6bN">
-                                        <rect key="frame" x="20" y="55.5" width="334" height="141"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="epy-dA-6bN">
+                                        <rect key="frame" x="20" y="55.5" width="334" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="epy-dA-6bN" id="tAx-Bo-iJX">
-                                            <rect key="frame" x="0.0" y="0.0" width="334" height="141"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="334" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Walk Dog" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6d-gG-N90">
@@ -44,10 +44,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wla-k8-bKx">
-                                                    <rect key="frame" x="10" y="69.5" width="314" height="2"/>
+                                                    <rect key="frame" x="10" y="49" width="314" height="2"/>
                                                 </progressView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khh-0v-0nq">
-                                                    <rect key="frame" x="10" y="86" width="50" height="50"/>
+                                                    <rect key="frame" x="10" y="45" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="SlW-QK-bZh"/>
                                                         <constraint firstAttribute="width" constant="50" id="yxx-cO-Tks"/>
@@ -56,7 +56,7 @@
                                                     <state key="normal" title="-"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONR-i6-mKJ">
-                                                    <rect key="frame" x="274" y="86" width="50" height="50"/>
+                                                    <rect key="frame" x="274" y="45" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="4uX-3e-mtw"/>
                                                         <constraint firstAttribute="width" constant="50" id="PMY-nB-K8M"/>
@@ -370,7 +370,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XGa-bY-w5g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1431.2" y="594.15292353823088"/>
+            <point key="canvasLocation" x="-1430" y="612"/>
         </scene>
         <!--SettingViewController-->
         <scene sceneID="UDA-Fp-aXl">
@@ -406,9 +406,15 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="49" id="9hV-JB-4uj"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="darkModeTogglePress:" destination="2RM-4F-gJF" eventType="valueChanged" id="z5i-Mw-b5a"/>
+                                        </connections>
                                     </switch>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="44h-ju-VOt">
                                         <rect key="frame" x="325" y="60.5" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="reminderTogglePress:" destination="2RM-4F-gJF" eventType="valueChanged" id="HWh-kF-AiI"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -433,21 +439,24 @@
                                 <state key="normal" title="RESET ALL">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="resetAllPressed:" destination="2RM-4F-gJF" eventType="touchUpInside" id="y6U-qf-QLJ"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a time below:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mnv-H0-lJZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a time below:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mnv-H0-lJZ">
                                 <rect key="frame" x="20" y="246" width="187" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fFy-dh-pxp">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fFy-dh-pxp">
                                 <rect key="frame" x="62" y="280" width="290" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="290" id="cxT-xW-u8d"/>
                                     <constraint firstAttribute="height" constant="150" id="k8K-8W-ON4"/>
                                 </constraints>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmI-N6-VEW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmI-N6-VEW">
                                 <rect key="frame" x="122" y="440" width="170" height="42"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -457,6 +466,9 @@
                                 <state key="normal" title="Add Reminder">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addReminderPress:" destination="2RM-4F-gJF" eventType="touchUpInside" id="nLV-4k-8Cy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -483,6 +495,14 @@
                         <viewLayoutGuide key="safeArea" id="m1z-nN-Wfz"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="EhX-cc-vGa"/>
+                    <connections>
+                        <outlet property="addReminderButton" destination="WmI-N6-VEW" id="5Pe-bq-ozm"/>
+                        <outlet property="chooseTimeLabel" destination="Mnv-H0-lJZ" id="5gL-bL-beq"/>
+                        <outlet property="darkModeSwitch" destination="deW-BL-XyS" id="db3-j0-Djj"/>
+                        <outlet property="logItemSwitch" destination="44h-ju-VOt" id="UtZ-f9-ZG2"/>
+                        <outlet property="resetAllButton" destination="QFy-A6-t6b" id="dEJ-s9-fad"/>
+                        <outlet property="timePicker" destination="fFy-dh-pxp" id="Xz7-Rw-EEE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1DZ-Cj-tfV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -493,9 +513,10 @@
             <objects>
                 <tabBarController id="lfE-nP-Flx" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="TXu-Wj-57h"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PMc-Sq-3pv">
+                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PMc-Sq-3pv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="YCG-ua-bfq"/>
