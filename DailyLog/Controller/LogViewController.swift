@@ -33,13 +33,13 @@ class LogViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     //Handling table Logic
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return LogBank.bank.count
+        return LogBank.populateTableCells(forDays: day).count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "LogItemCell", for: indexPath) as! CustomTableViewCell
-        let row = LogBank.bank[indexPath.row]
+        let row = LogBank.tableCells[indexPath.row]
         
         cell.titleLabel?.text = row.userTitle
         cell.plusButton.tag = indexPath.row
@@ -62,7 +62,7 @@ class LogViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     @objc
     func buttonTapped(sender: UIButton){
-        let row = LogBank.bank[sender.tag]
+        let row = LogBank.tableCells[sender.tag]
         
         if sender.currentTitle == "+"{
             row.addDone()
