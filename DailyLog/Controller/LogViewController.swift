@@ -15,16 +15,23 @@ class LogViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
+        updateToCurrentDate()
     }
     
-
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         tableView.reloadData()
     }
     
-        @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var dayLabel: UILabel!
     
+    var tableDate: Date?
+    var day = ""
+    var dateButtonPress = 0
+    
+    //Handling table Logic
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return LogBank.bank.count
     }
@@ -41,7 +48,7 @@ class LogViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         if row.done != 0{
             cell.progressBar?.setProgress((Float(row.done)/Float(row.frequency!)), animated: false)
-            cell.progressBar?.transform.scaledBy(x: 1, y: 100)
+            cell.progressBar?.transform.scaledBy(x: 1, y: 10)
             cell.progressBar?.tintColor = row.color!
         }else{
             cell.progressBar?.setProgress(0, animated: false)
@@ -66,7 +73,54 @@ class LogViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         self.tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: UITableView.RowAnimation.automatic)
     }
     
-
+    //Handling date Logic
+    @IBAction func arrowTapped(_ sender: UIButton) {
+        
+        var dayComponent    = DateComponents()
+        let theCalendar     = Calendar.current
+        sender.tag == 0 ? (dayComponent.day = -1) : (dayComponent.day = 1)
+        (sender.tag == 0) ? (dateButtonPress -= 1): (dateButtonPress += 1)
+        
+        let nextDate  = theCalendar.date(byAdding: dayComponent, to: tableDate!)
+        setDate(for: nextDate!)
+        tableView.reloadData()
+    }
     
+    func updateToCurrentDate(){
+        let date = Date()
+        setDate(for: date)
+    }
+    
+    //Dateformatter in Month XX, XXXX
+    func setDate(for date:Date){
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .none
+        dateFormatter.locale = Locale(identifier: "en_US")
+        
+        dateLabel.text = dateFormatter.string(from: date)
+        tableDate = date
+        
+        updateDay()
+    }
+    
+    func updateDay(){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        let requested = dateFormatter.string(from: tableDate!)
+        
+        if dateButtonPress == 0{
+            dayLabel.text = "Today"
+        } else if dateButtonPress == 1{
+            dayLabel.text = "Tomorrow"
+        } else if dateButtonPress == -1{
+            dayLabel.text = "Yesterday"
+        } else{
+            dayLabel.text = dateFormatter.string(from: tableDate!)
+        }
+        
+        day = requested
+    }
 }
 

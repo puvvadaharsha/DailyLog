@@ -10,6 +10,7 @@ import Foundation
 
 class Logbank{
     var bank = [Logitem]()
+    var tableCells = [Logitem]()
     
     init() {}
     
@@ -21,5 +22,17 @@ class Logbank{
         for item in bank{
             print(item.toString())
         }
+    }
+    
+    func populateTableCells(forDays chosenDay:String) -> [Logitem]{
+        tableCells = [Logitem]()
+        let dayChosen = String(chosenDay.prefix(3))
+        
+        for item in bank{
+            if (item.days?.contains(dayChosen))!{
+                tableCells.append(item)
+            }
+        }
+        return tableCells
     }
 }
