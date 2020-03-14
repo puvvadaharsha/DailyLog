@@ -8,17 +8,21 @@
 
 import UIKit
 
+let bank = Logbank()
+
 class AddViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        clearAll()
     }
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var frequencyLabel: UILabel!
     @IBOutlet var dayButtons: [UIButton]!
     @IBOutlet var colorButtons: [UIButton]!
+    @IBOutlet weak var stepper: UIStepper!
     
     
     var frequency: Int = 1
@@ -93,13 +97,33 @@ class AddViewController: UIViewController{
             present(alert, animated: true, completion: nil)
             
         } else{
-            
-            print("\(userTitle), \(frequency), \(color!)" )
-            for item in days{
-                print(item)
-            }
-            
+            let item = Logitem(logItem: userTitle, timesDaily: frequency, On: days, withColor: color!)
+            bank.addLogItem(item: item)
+            bank.toString()
+            clearAll()
         }
+    }
+    
+    func clearAll(){
+        titleTextField.text = ""
+        userTitle = ""
+        
+        frequency = 1
+        frequencyLabel.text = "\(1)"
+        stepper.value = Double(frequency)
+        
+        days = []
+        for item in dayButtons{
+            item.isSelected = false
+            item.backgroundColor = UIColor.systemBackground
+        }
+        
+        color = nil
+        for item in colorButtons{
+            item.layer.opacity = 0.5
+            item.isSelected = false
+        }
+        
     }
 }
 

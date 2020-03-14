@@ -31,6 +31,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="334" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wla-k8-bKx">
+                                                    <rect key="frame" x="10" y="49" width="314" height="2"/>
+                                                </progressView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Walk Dog" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6d-gG-N90">
                                                     <rect key="frame" x="20" y="11" width="112" height="31"/>
                                                     <fontDescription key="fontDescription" name="RobotoSlab-Regular_Light" family="Roboto Slab" pointSize="26"/>
@@ -43,9 +46,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wla-k8-bKx">
-                                                    <rect key="frame" x="10" y="49" width="314" height="2"/>
-                                                </progressView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khh-0v-0nq">
                                                     <rect key="frame" x="10" y="45" width="50" height="50"/>
                                                     <constraints>
@@ -143,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2378.2608695652175" y="593.97321428571422"/>
+            <point key="canvasLocation" x="-2365" y="594"/>
         </scene>
         <!--AddViewController-->
         <scene sceneID="YDo-FX-mbf">
@@ -440,6 +440,7 @@
                     <tabBarItem key="tabBarItem" title="Add" image="plus" catalog="system" id="uc9-p2-FbF"/>
                     <connections>
                         <outlet property="frequencyLabel" destination="205-fY-99A" id="PRv-0d-NFK"/>
+                        <outlet property="stepper" destination="JUl-jL-nz4" id="LjD-bv-aRs"/>
                         <outlet property="titleTextField" destination="8Cr-ex-Dkf" id="Qux-gT-uRt"/>
                         <outletCollection property="dayButtons" destination="zkJ-Qf-XUP" collectionClass="NSMutableArray" id="5I9-ZT-ipM"/>
                         <outletCollection property="dayButtons" destination="7R9-xf-VQA" collectionClass="NSMutableArray" id="BG1-jy-XSC"/>
@@ -524,7 +525,7 @@
                                     <constraint firstAttribute="height" constant="100" id="zJo-JF-z8K"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFy-A6-t6b">
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFy-A6-t6b">
                                 <rect key="frame" x="20" y="741" width="374" height="42"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -548,7 +549,7 @@
                                     <constraint firstAttribute="height" constant="150" id="k8K-8W-ON4"/>
                                 </constraints>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmI-N6-VEW">
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmI-N6-VEW">
                                 <rect key="frame" x="122" y="440" width="170" height="42"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -598,7 +599,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1DZ-Cj-tfV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-446.25" y="589.43661971830988"/>
+            <point key="canvasLocation" x="-438" y="594"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="16a-aA-Eaf">
