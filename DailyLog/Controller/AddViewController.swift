@@ -8,7 +8,7 @@
 
 import UIKit
 
-let bank = Logbank()
+let LogBank = Logbank()
 
 class AddViewController: UIViewController{
 
@@ -98,8 +98,7 @@ class AddViewController: UIViewController{
             
         } else{
             let item = Logitem(logItem: userTitle, timesDaily: frequency, On: days, withColor: color!)
-            bank.addLogItem(item: item)
-            bank.toString()
+            LogBank.addLogItem(item: item)
             clearAll()
         }
     }

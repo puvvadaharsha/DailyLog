@@ -14,6 +14,7 @@ class Logitem{
     let frequency: Int?
     let days: [String]?
     let color: UIColor?
+    var done: Int = 0
     
     init(logItem userTitle: String,timesDaily frequency: Int,On days:[String],withColor color:UIColor) {
         self.userTitle = userTitle
@@ -25,6 +26,20 @@ class Logitem{
         print("\(userTitle!), \(frequency!), \(color!)" )
         for item in days!{
             print(item)
+        }
+    }
+    
+    func addDone(){
+        done += 1
+        if done >= frequency!{
+            done = frequency!
+        }
+    }
+    
+    func minusDone(){
+        done -= 1
+        if done <= 0{
+            done = 0
         }
     }
 }
