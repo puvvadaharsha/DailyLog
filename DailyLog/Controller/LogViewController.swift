@@ -40,14 +40,14 @@ class LogViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "LogItemCell", for: indexPath) as! CustomTableViewCell
         let row = LogBank.tableCells[indexPath.row]
-        
+//        print(row.userTitle!)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         cell.titleLabel?.text = row.userTitle
         cell.plusButton.tag = indexPath.row
         cell.minusButton.tag = indexPath.row
-        cell.numberLabel?.text = "\(row.done)/\(row.frequency!)"
+        cell.numberLabel?.text = "\(row.keyValues[day]!)/\(row.frequency!)"
         
-        if row.done != 0{
-            cell.progressBar?.setProgress((Float(row.done)/Float(row.frequency!)), animated: false)
+        if row.keyValues[day]! != 0{
+            cell.progressBar?.setProgress((Float(row.keyValues[day]!)/Float(row.frequency!)), animated: false)
             cell.progressBar?.transform.scaledBy(x: 1, y: 10)
             cell.progressBar?.tintColor = row.color!
         }else{
@@ -65,9 +65,9 @@ class LogViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         let row = LogBank.tableCells[sender.tag]
         
         if sender.currentTitle == "+"{
-            row.addDone()
+            row.addDone(for: day)
         } else{
-            row.minusDone()
+            row.minusDone(for: day)
         }
         
         self.tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: UITableView.RowAnimation.automatic)

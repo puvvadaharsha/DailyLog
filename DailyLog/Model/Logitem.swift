@@ -14,32 +14,34 @@ class Logitem{
     let frequency: Int?
     let days: [String]?
     let color: UIColor?
-    var done: Int = 0
+    var keyValues = ["Monday" : 0, "Tuesday" : 0, "Wednesday" : 0, "Thursday" : 0, "Friday" : 0, "Saturday" : 0, "Sunday" : 0]
     
-    init(logItem userTitle: String,timesDaily frequency: Int,On days:[String],withColor color:UIColor) {
+    init(logItem userTitle: String,timesDaily frequency: Int,On days:[String], withColor color:UIColor) {
         self.userTitle = userTitle
         self.frequency = frequency
         self.days = days
         self.color = color
+        print(userTitle)
     }
+    
     func toString(){
         print("\(userTitle!), \(frequency!), \(color!)" )
         for item in days!{
             print(item)
         }
     }
-    
-    func addDone(){
-        done += 1
-        if done >= frequency!{
-            done = frequency!
+
+    func addDone(for Day: String){
+        keyValues[Day]! += 1
+        if keyValues[Day]! >= frequency!{
+            keyValues[Day] = frequency!
         }
     }
     
-    func minusDone(){
-        done -= 1
-        if done <= 0{
-            done = 0
+    func minusDone(for Day: String){
+        keyValues[Day]! -= 1
+        if keyValues[Day]! <= 0{
+            keyValues[Day] = 0
         }
     }
 }
