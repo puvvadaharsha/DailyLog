@@ -21,7 +21,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="110" estimatedRowHeight="110" sectionHeaderHeight="18" sectionFooterHeight="18" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iFs-rR-CVf">
+                            <tableView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="110" estimatedRowHeight="110" sectionHeaderHeight="18" sectionFooterHeight="18" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iFs-rR-CVf">
                                 <rect key="frame" x="0.0" y="170" width="414" height="628"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -124,7 +124,7 @@
                                             <action selector="arrowTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Jq-Oy-OZd"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBH-6W-KB2">
+                                    <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBH-6W-KB2">
                                         <rect key="frame" x="136" y="-2.5" width="142" height="45"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                         <nil key="textColor"/>
@@ -228,24 +228,24 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mL4-eD-VXZ">
-                                        <rect key="frame" x="0.0" y="159" width="394" height="200"/>
+                                        <rect key="frame" x="0.0" y="159" width="394" height="210"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="rcr-E0-cSR"/>
+                                            <constraint firstAttribute="height" constant="210" id="rcr-E0-cSR"/>
                                         </constraints>
-                                        <string key="text">When you have finished the activity once, press the + button to record it into the app. As you do it more times, the progress bar will increase accordingly. If you made a mistake in recording it, you can press the - button to correct it. Pressing the arrow buttons on top allow you to change the date. The app will automatically update the items according to that day.</string>
+                                        <mutableString key="text">When you have finished the activity once, press the + button to record it into the app. As you do it more times, the progress bar will increase accordingly. If you made a mistake in recording it, you can press the - button to correct it. Double tapping a cell resets it to 0. Pressing the arrow buttons on top allow you to change the date. The app will automatically update the items according to that day.</mutableString>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIA-6T-RuZ">
-                                        <rect key="frame" x="0.0" y="360" width="394" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="370" width="394" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMK-Su-vjl">
-                                        <rect key="frame" x="0.0" y="381.5" width="394" height="369"/>
+                                        <rect key="frame" x="0.0" y="391.5" width="394" height="359"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <string key="text">Here you can set the app to follow dark mode or light mode. Additionally, you can choose a time for the app to remind you to enter your log item details. The app will send you a local notification at the time chosen.</string>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>

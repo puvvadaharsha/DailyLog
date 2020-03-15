@@ -40,7 +40,7 @@ class LogViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "LogItemCell", for: indexPath) as! CustomTableViewCell
         let row = LogBank.tableCells[indexPath.row]
-//        print(row.userTitle!)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
         cell.titleLabel?.text = row.userTitle
         cell.plusButton.tag = indexPath.row
         cell.minusButton.tag = indexPath.row
@@ -57,6 +57,11 @@ class LogViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         cell.plusButton?.addTarget(self, action: #selector(buttonTapped(sender:)), for: .touchUpInside)
         cell.minusButton?.addTarget(self, action: #selector(buttonTapped(sender:)), for: .touchUpInside)
         
+        //add doubletap recognizer that will reset cell to 0
+        let doubleTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleDoubleTap(sender:)))
+        doubleTapGestureRecognizer.numberOfTapsRequired = 2
+        view.addGestureRecognizer(doubleTapGestureRecognizer)
+        
         return cell
     }
     
@@ -71,6 +76,15 @@ class LogViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         }
         
         self.tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: UITableView.RowAnimation.automatic)
+    }
+    
+    //reset table cell on doubleTap
+    @objc func handleDoubleTap(sender: UITapGestureRecognizer){
+        let touchPoint = sender.location(in: tableView)
+        if let indexPath = tableView.indexPathForRow(at: touchPoint) {
+            LogBank.tableCells[indexPath.row].keyValues[day]! = 0
+            self.tableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+        }
     }
     
     //Handling date Logic

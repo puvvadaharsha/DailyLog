@@ -17,6 +17,7 @@ class InfoViewController: UIViewController {
         } else{
             self.overrideUserInterfaceStyle = .light
         }
-        // Do any additional setup after loading the view.
+        
+        
     }
 }
