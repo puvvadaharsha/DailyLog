@@ -112,10 +112,10 @@ class SettingViewController: UIViewController {
     }
     
     
-    //need to add action if reset is confirmed
+    //reset all user input data
     @IBAction func resetAllPressed(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Reset all Settings and Data", message: "Are you sure?", preferredStyle: .alert)
-        let accept = UIAlertAction(title: "Confirm", style: .destructive, handler: nil)
+        let alert = UIAlertController(title: "Reset all Data", message: "Are you sure?", preferredStyle: .alert)
+        let accept = UIAlertAction(title: "Confirm", style: .destructive, handler:{ _ in LogBank.resetAll()})
         let cancel = UIAlertAction(title:"Cancel", style: .cancel, handler: nil)
         
         alert.addAction(cancel)

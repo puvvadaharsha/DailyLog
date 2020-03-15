@@ -35,4 +35,9 @@ class Logbank{
         }
         return tableCells
     }
+    
+    func resetAll(){
+        bank = []
+        tableCells = []
+    }
 }
