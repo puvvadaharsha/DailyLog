@@ -124,8 +124,8 @@
                                             <action selector="arrowTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Jq-Oy-OZd"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DayGoesHere" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBH-6W-KB2">
-                                        <rect key="frame" x="95.5" y="-2.5" width="223" height="45"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBH-6W-KB2">
+                                        <rect key="frame" x="136" y="-2.5" width="142" height="45"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -144,11 +144,17 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logs:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocV-a5-Z0K">
-                                <rect key="frame" x="20" y="146" width="374" height="24"/>
+                                <rect key="frame" x="20" y="146" width="314" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yM-s0-eYm">
+                                <rect key="frame" x="369" y="146" width="25" height="24"/>
+                                <connections>
+                                    <segue destination="8xb-3m-KG6" kind="show" id="UNV-gE-2rn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -156,15 +162,17 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iFs-rR-CVf" secondAttribute="bottom" constant="15" id="Ga4-IS-SEP"/>
                             <constraint firstItem="g9j-yb-5GQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="La0-wk-7jJ"/>
                             <constraint firstItem="ocV-a5-Z0K" firstAttribute="top" secondItem="IEn-yE-CBj" secondAttribute="bottom" constant="8" symbolic="YES" id="NfC-xt-gSW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1yM-s0-eYm" secondAttribute="trailing" constant="20" id="Snu-Io-9wp"/>
                             <constraint firstItem="iFs-rR-CVf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VfS-eA-0LA"/>
                             <constraint firstItem="IEn-yE-CBj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yp9-cc-HJX"/>
+                            <constraint firstItem="1yM-s0-eYm" firstAttribute="centerY" secondItem="ocV-a5-Z0K" secondAttribute="centerY" id="doB-oI-lrK"/>
                             <constraint firstItem="g9j-yb-5GQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="evO-XO-TVL"/>
                             <constraint firstItem="ocV-a5-Z0K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hvJ-pp-OH6"/>
                             <constraint firstItem="g9j-yb-5GQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="k8n-VJ-x7N"/>
                             <constraint firstItem="IEn-yE-CBj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="oTr-UO-OPV"/>
                             <constraint firstItem="iFs-rR-CVf" firstAttribute="top" secondItem="ocV-a5-Z0K" secondAttribute="bottom" id="sgo-wC-Uqy"/>
                             <constraint firstItem="IEn-yE-CBj" firstAttribute="top" secondItem="g9j-yb-5GQ" secondAttribute="bottom" constant="15" id="vOh-Ui-z3A"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ocV-a5-Z0K" secondAttribute="trailing" constant="20" id="wrU-Xh-9V5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ocV-a5-Z0K" secondAttribute="trailing" constant="80" id="wrU-Xh-9V5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -178,6 +186,92 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2365" y="594"/>
+        </scene>
+        <!--InfoViewController-->
+        <scene sceneID="9EE-TM-BdX">
+            <objects>
+                <viewController id="8xb-3m-KG6" userLabel="InfoViewController" customClass="InfoViewController" customModule="DailyLog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PJR-fv-9vF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW IT WORKS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QO-l0-G6H">
+                                <rect key="frame" x="20" y="10" width="374" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="UiY-fM-S80">
+                                <rect key="frame" x="10" y="47.5" width="394" height="750.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Items:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tpp-KJ-LfT">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAc-UC-eMn">
+                                        <rect key="frame" x="0.0" y="21.5" width="394" height="115"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="115" id="2Yg-9n-SXP"/>
+                                        </constraints>
+                                        <string key="text">On the Add Items page, you can choose an activity to log, add a name for that activity and choose how frequent you want it counted per day. Add the days you want it tracked for and choose a color. Then press ADD ITEM to create a log item entry.</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logs:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkZ-V9-peq">
+                                        <rect key="frame" x="0.0" y="137.5" width="394" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mL4-eD-VXZ">
+                                        <rect key="frame" x="0.0" y="159" width="394" height="200"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="rcr-E0-cSR"/>
+                                        </constraints>
+                                        <mutableString key="text">When you have finished the activity once, press the + button to record it into the app. As you do it more times, the progress bar will increase accordingly. If you made a mistake in recording it, you can press the - button to correct it. Pressing the arrow buttons on top allow you to change the date. The app will automatically update the items according to that day.</mutableString>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIA-6T-RuZ">
+                                        <rect key="frame" x="0.0" y="360" width="394" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMK-Su-vjl">
+                                        <rect key="frame" x="0.0" y="381.5" width="394" height="369"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <string key="text">Here you can set the app to follow dark mode or light mode. Additionally, you can choose a time for the app to remind you to enter your log item details. The app will send you a local notification at the time chosen.</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6QO-l0-G6H" firstAttribute="top" secondItem="EqD-vU-jIL" secondAttribute="top" constant="10" id="2XR-p3-dZ4"/>
+                            <constraint firstItem="EqD-vU-jIL" firstAttribute="bottom" secondItem="UiY-fM-S80" secondAttribute="bottom" constant="10" id="7C5-PE-9Ec"/>
+                            <constraint firstItem="EqD-vU-jIL" firstAttribute="trailing" secondItem="UiY-fM-S80" secondAttribute="trailing" constant="10" id="7uc-PQ-mgd"/>
+                            <constraint firstItem="6QO-l0-G6H" firstAttribute="leading" secondItem="EqD-vU-jIL" secondAttribute="leading" constant="20" id="K2J-Jj-JLK"/>
+                            <constraint firstItem="UiY-fM-S80" firstAttribute="top" secondItem="6QO-l0-G6H" secondAttribute="bottom" constant="5" id="O4S-Yo-Gmx"/>
+                            <constraint firstItem="EqD-vU-jIL" firstAttribute="trailing" secondItem="6QO-l0-G6H" secondAttribute="trailing" constant="20" id="est-wu-i7r"/>
+                            <constraint firstItem="UiY-fM-S80" firstAttribute="leading" secondItem="EqD-vU-jIL" secondAttribute="leading" constant="10" id="llI-f1-gGd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EqD-vU-jIL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SjZ-pq-5oV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PuS-uZ-wa5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2373.75" y="1320.4225352112676"/>
         </scene>
         <!--AddViewController-->
         <scene sceneID="YDo-FX-mbf">
@@ -206,7 +300,7 @@
                                         </connections>
                                     </stepper>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="K3t-SZ-7Fj">
-                                        <rect key="frame" x="20" y="256" width="374" height="40"/>
+                                        <rect key="frame" x="20" y="252" width="374" height="40"/>
                                         <subviews>
                                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ic3-hn-J92">
                                                 <rect key="frame" x="0.0" y="0.0" width="56.5" height="40"/>
@@ -289,7 +383,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="VCq-DC-BEK">
-                                        <rect key="frame" x="20" y="306" width="374" height="40"/>
+                                        <rect key="frame" x="20" y="302" width="374" height="40"/>
                                         <subviews>
                                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1P-wM-kIM">
                                                 <rect key="frame" x="0.0" y="0.0" width="56.5" height="40"/>
@@ -337,7 +431,7 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppo-Nh-RxJ">
-                                        <rect key="frame" x="20" y="228" width="374" height="18"/>
+                                        <rect key="frame" x="20" y="224" width="374" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -349,10 +443,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6vm-a2-hSI">
-                                        <rect key="frame" x="20" y="179" width="374" height="34"/>
+                                        <rect key="frame" x="20" y="179" width="374" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkJ-Qf-XUP">
-                                                <rect key="frame" x="0.0" y="0.0" width="45" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <state key="normal" title="Mon">
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -361,7 +456,8 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7R9-xf-VQA">
-                                                <rect key="frame" x="55" y="0.0" width="44.5" height="34"/>
+                                                <rect key="frame" x="55" y="0.0" width="44.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <state key="normal" title="Tue">
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -370,7 +466,8 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJn-DR-prY">
-                                                <rect key="frame" x="109.5" y="0.0" width="45" height="34"/>
+                                                <rect key="frame" x="109.5" y="0.0" width="45" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <state key="normal" title="Wed">
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -379,7 +476,8 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwV-6c-aU4">
-                                                <rect key="frame" x="164.5" y="0.0" width="45" height="34"/>
+                                                <rect key="frame" x="164.5" y="0.0" width="45" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <state key="normal" title="Thu">
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -388,7 +486,8 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsS-CY-vWe">
-                                                <rect key="frame" x="219.5" y="0.0" width="45" height="34"/>
+                                                <rect key="frame" x="219.5" y="0.0" width="45" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <state key="normal" title="Fri">
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -397,7 +496,8 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJv-Dg-iRw">
-                                                <rect key="frame" x="274.5" y="0.0" width="44.5" height="34"/>
+                                                <rect key="frame" x="274.5" y="0.0" width="44.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <state key="normal" title="Sat">
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -406,7 +506,8 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbJ-BZ-xQG">
-                                                <rect key="frame" x="329" y="0.0" width="45" height="34"/>
+                                                <rect key="frame" x="329" y="0.0" width="45" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <state key="normal" title="Sun">
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>

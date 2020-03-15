@@ -8,7 +8,7 @@
 
 import UIKit
 import UserNotifications
-
+var interfaceStyle: String?
 
 class SettingViewController: UIViewController {
     @IBOutlet weak var darkModeSwitch: UISwitch!
@@ -32,8 +32,10 @@ class SettingViewController: UIViewController {
         guard let parent = parentVC as? UITabBarController else{return}
         if sender.isOn{
             parent.overrideUserInterfaceStyle = .dark
+            interfaceStyle = "dark"
         } else{
             parent.overrideUserInterfaceStyle = .light
+            interfaceStyle = "light"
         }
     }
     

@@ -21,7 +21,6 @@ class Logitem{
         self.frequency = frequency
         self.days = days
         self.color = color
-        print(userTitle)
     }
     
     func toString(){
