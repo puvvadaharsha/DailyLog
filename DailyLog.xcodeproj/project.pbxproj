@@ -14,6 +14,7 @@
 		6F0D3138240F245000F5E005 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F0D3136240F245000F5E005 /* Main.storyboard */; };
 		6F0D313A240F245100F5E005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F0D3139240F245100F5E005 /* Assets.xcassets */; };
 		6F0D313D240F245100F5E005 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F0D313B240F245100F5E005 /* LaunchScreen.storyboard */; };
+		6F3AADF2253385C80035CDA5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6F3AADF1253385C80035CDA5 /* README.md */; };
 		6F87A617241C9357008B9041 /* Logitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F87A616241C9357008B9041 /* Logitem.swift */; };
 		6F87A619241C953C008B9041 /* Logbank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F87A618241C953C008B9041 /* Logbank.swift */; };
 		6F87A61B241C9989008B9041 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F87A61A241C9989008B9041 /* CustomTableViewCell.swift */; };
@@ -31,6 +32,7 @@
 		6F0D3139240F245100F5E005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F0D313C240F245100F5E005 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F0D313E240F245100F5E005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F3AADF1253385C80035CDA5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6F87A616241C9357008B9041 /* Logitem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Logitem.swift; path = DailyLog/Model/Logitem.swift; sourceTree = SOURCE_ROOT; };
 		6F87A618241C953C008B9041 /* Logbank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logbank.swift; sourceTree = "<group>"; };
 		6F87A61A241C9989008B9041 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = DailyLog/Model/CustomTableViewCell.swift; sourceTree = SOURCE_ROOT; };
@@ -52,6 +54,7 @@
 		6F0D3124240F245000F5E005 = {
 			isa = PBXGroup;
 			children = (
+				6F3AADF1253385C80035CDA5 /* README.md */,
 				6F0D312F240F245000F5E005 /* DailyLog */,
 				6F0D312E240F245000F5E005 /* Products */,
 			);
@@ -136,7 +139,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Harsha Puvvada";
 				TargetAttributes = {
 					6F0D312C240F245000F5E005 = {
@@ -169,6 +172,7 @@
 			files = (
 				6F0D313D240F245100F5E005 /* LaunchScreen.storyboard in Resources */,
 				6F0D313A240F245100F5E005 /* Assets.xcassets in Resources */,
+				6F3AADF2253385C80035CDA5 /* README.md in Resources */,
 				6F0D3138240F245000F5E005 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +244,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -300,6 +305,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

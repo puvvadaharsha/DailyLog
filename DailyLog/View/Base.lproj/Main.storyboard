@@ -233,7 +233,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="210" id="rcr-E0-cSR"/>
                                         </constraints>
-                                        <mutableString key="text">When you have finished the activity once, press the + button to record it into the app. As you do it more times, the progress bar will increase accordingly. If you made a mistake in recording it, you can press the - button to correct it. Double tapping a cell resets it to 0. Pressing the arrow buttons on top allow you to change the date. The app will automatically update the items according to that day.</mutableString>
+                                        <string key="text">When you have finished the activity once, press the + button to record it into the app. As you do it more times, the progress bar will increase accordingly. If you made a mistake in recording it, you can press the - button to correct it. Double tapping a cell resets it to 0. Pressing the arrow buttons on top allow you to change the date. The app will automatically update the items according to that day.</string>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
